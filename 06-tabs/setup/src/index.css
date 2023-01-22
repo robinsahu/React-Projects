@@ -181,13 +181,13 @@ Jobs
   line-height: 1;
   outline-color: var(--clr-primary-10);
 }
-.job-btn:hover {
+/* .job-btn:hover {
   color: var(--clr-primary-5);
   box-shadow: 0 2px var(--clr-primary-5);
-}
+} */
 .active-btn {
   color: var(--clr-primary-5);
-  box-shadow: 0 2px var(--clr-primary-5);
+  /* box-shadow: 0 2px var(--clr-primary-5); */
 }
 
 .job-info h3 {
