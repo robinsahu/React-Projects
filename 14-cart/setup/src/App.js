@@ -1,12 +1,15 @@
-import React from 'react'
-import { useGlobalContext } from './context'
+import React, { useContext } from "react";
+import { useGlobalContext } from "./context";
 
 // components
-import Navbar from './Navbar'
-import CartContainer from './CartContainer'
+import Navbar from "./Navbar";
+import CartContainer from "./CartContainer";
+import ApplicationContext from "./context";
 // items
 
 function App() {
+  const { value, children } = useContext(ApplicationContext);
+  console.log(value, children);
   // if (loading) {
   //   return (
   //     <div className='loading'>
@@ -19,7 +22,7 @@ function App() {
       <Navbar />
       <CartContainer />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

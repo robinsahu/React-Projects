@@ -1,13 +1,32 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../logo.svg'
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import logo from "../logo.svg";
 
 const Navbar = () => {
   return (
-    <div>
-      <h2>navbar component</h2>
-    </div>
-  )
-}
+    <nav className="navbar">
+      <NavLink
+        to="/"
+        style={({ isActive }) => {
+          return {
+            color: isActive ? "blue" : "grey",
+          };
+        }}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about"
+        style={({ isActive }) => {
+          return {
+            color: isActive ? "blue" : "grey",
+          };
+        }}
+      >
+        About
+      </NavLink>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
