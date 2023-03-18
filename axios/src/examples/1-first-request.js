@@ -6,10 +6,12 @@ const url = "https://course-api.com/react-store-products";
 const FirstRequest = () => {
   const fetchData = async () => {
     try {
-      const response = await axios(url);
+      const response = await fetch(url);
+      const response2 = await fetch(url);
+      const response3 = await response2.json();
 
-      console.log(response);
       console.log(response.data);
+      console.log({ response2 });
       // const response = await fetch(url);
       // const data = await response.json();
       // console.log(data);
